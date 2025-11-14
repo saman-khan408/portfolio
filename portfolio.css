@@ -1,0 +1,211 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+
+        .navbar {
+            min-height: 10vh;
+            background-color: #111;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 5vw;
+        }
+
+        .nav-name {
+            color: white;
+            font-size: clamp(1rem, 5vw, 2rem);
+        }
+
+        .navbar-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2vw;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar-links a {
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            color: white;
+            text-decoration: none;
+            transition: color 0.25s ease;
+        }
+
+        .navbar-links a:hover {
+            color: lightblue;
+        }
+        .navbar-links a:focus-visible {
+            outline: 3px solid lightblue;
+            outline-offset: 3px;
+        }
+        .menu-icon {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        .hero {
+            min-height: 70vh;
+            padding: 10vh 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-text {
+            color: white;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .hero-subtext {
+            margin-top: 0.5rem;
+            color: rgb(238, 180, 73);
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            text-align: center;
+        }
+
+        .text-container {
+            height: auto;
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            margin: auto;
+            background-color: rgba(32, 31, 31, 0.8);
+            padding: 1.5rem;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-btn {
+            display: block;
+            padding: 0.6em 1.2em;
+            border-radius: 6px;
+            width: fit-content;
+            text-decoration: none;
+            background-color: rgb(238, 180, 73);
+            color: white;
+            cursor: pointer;
+            font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+            font-weight: bold;
+            margin: 1rem auto 0;
+            text-align: center;
+        }
+        .hero-btn:focus-visible {
+            outline: 3px solid white;
+            outline-offset: 3px;
+        }
+        .hero-btn:hover {
+            background-color: rgb(230, 160, 50);
+        }
+
+        .about {
+            padding: 6vh 2vw;
+            text-align: center;
+            background-color: #fff8f6;
+        }
+        .about p,
+        .contact p {
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact {
+            background-color: #222;
+            color: white;
+            padding: 4vh 2vw;
+            text-align: center;
+        }
+
+        .contact a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        @media (max-width: 700px) {
+        .navbar-links {
+            gap: 12px;
+        }
+
+        .hero {
+            min-height: min(70vh, 520px);
+        }
+        .hero-btn {
+            width: 100%;
+            display: block;
+            margin: 1rem auto 0;
+        }
+
+        .text-container {
+            width: 95%;
+            padding: 1rem;
+        }
+
+        .hero-text {
+            font-size: 1.3rem;
+        }
+        .menu-icon {
+            display: block;
+        }
+
+        .navbar-links {
+            display: none;
+            flex-direction: column;
+            background-color: #111;
+            position: absolute;
+            top: 10vh;
+            right: 0;
+            width: 100%;
+            padding: 1rem 0;
+            text-align: center;
+            gap: 1.2rem;
+        }
+
+        
+        #menu-toggle:checked+.menu-icon+.navbar-links {
+            display: flex;
+        }
+        }
+        @media (prefers-reduced-motion: reduce) {
+        * {
+            transition: none !important;
+            animation: none !important;
+        }
+        }
+        
