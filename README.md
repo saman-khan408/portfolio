@@ -4,7 +4,7 @@ This is my personal portfolio website, built using **HTML and CSS**.
 It showcases my journey as a beginner web developer.
 
 ## About Me
-I am a beginner web developer learning HTML and CSS.  
+I am a beginner web developer learning web development.  
 This portfolio represents my first step into web development.
 
 ## Website
